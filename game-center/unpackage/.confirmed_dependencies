@@ -1,0 +1,30 @@
+{
+	"index.html": {
+		"resources": [
+			"images/game-classify.png",
+			"images/more-btn.png",
+			"images/topic8.png",
+			"images/recommend.png",
+			"images/game-logo.png",
+			"css/index.css",
+			"images/topic1.png",
+			"images/search-btn.png",
+			"images/topic7.png",
+			"js/jquery-1.11.0.js",
+			"js/mui.min.js",
+			"images/banner1.jpg",
+			"images/topic2.png",
+			"css/mui.min.css",
+			"images/topic5.png",
+			"images/game-more.png",
+			"images/feature-topic.png",
+			"images/topic3.png",
+			"js/home.js",
+			"images/games-icon.png",
+			"images/package.png",
+			"images/home-search.png",
+			"images/topic4.png",
+			"images/topic6.png"
+		]
+	}
+}

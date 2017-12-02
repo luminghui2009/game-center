@@ -1,0 +1,1011 @@
+*:not(input,textarea){
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select:none;
+	user-select:none;
+}
+a{
+	-webkit-tap-highlight-color:rgba(255, 0, 0, 0) !important;
+	-moz-tap-highlight-color:rgba(255, 0, 0, 0) !important;
+	-ms-tap-highlight-color:rgba(255, 0, 0, 0) !important;
+	-o-tap-highlight-color:rgba(255, 0, 0, 0) !important;
+	tap-highlight-color:rgba(255, 0, 0, 0) !important;
+}
+/*星级评分*/
+.rating{
+	height:0.19rem;
+	width:1rem;
+}
+.rating .rating-item{
+	width:0.2rem;
+	height:0.19rem;
+	display:inline-block;
+	background:url('../images/star1.png') no-repeat -0.2rem 0;
+	background-size:cover;
+	margin-right:-0.02rem;
+}
+#slider .mui-slider-group{
+	margin-top:19px;
+}
+.mui-table-view-cell>a:not(.mui-btn).mui-active{
+	background-color:rgba(255, 0, 0, 0) !important;
+}
+.mui-content{
+	background-color:#dcdcdc;
+}
+.mui-segmented-control.mui-segmented-control-inverted~.mui-slider-progress-bar{
+	background-color:#fff;
+	height:2px;
+	position:absolute;
+	top:36px;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+	color:#fff;
+}
+#slider{
+	position:relative;
+}
+#slider .slider-game-chosen{
+	height:calc(100vh - 1.08rem - 19px);
+	max-height:calc(100vh - 1.08rem - 19px);
+}
+#sliderSegmentedControl{
+	background-color:#00ba85;
+	color:#fff !important;
+	position:fixed !important;
+	top:0 !important;
+	left:0 !important;
+	z-index:99 !important;
+	border-bottom:1px solid #dcdcdc;
+}
+#sliderProgressBar{
+	z-index:99;
+	position:fixed;
+}
+#sliderSegmentedControl .active{
+	color:#fff !important;
+}
+
+#my-slider{
+	position:relative;
+}
+#my-slider .mui-active {
+    background-color: #fff !important;
+}
+#my-slider .mui-slider-indicator .mui-indicator {
+	display: inline-block;
+	width:6px;
+	height:6px;
+	margin:1px 6px;
+	border-radius:50%;
+	background:#aaa;
+    box-shadow: none !important;
+    background-color: #dcdcdc;
+    opacity: 0.7;
+}
+#my-slider .mui-slider-indicator{
+	position:absolute;
+	bottom:0.62rem;
+	/*width:100%;*/
+	text-align:center;
+}
+
+#my-slider .search{
+	position:absolute;
+	bottom:0.18rem;
+	left:0;
+	right:0;
+	margin:0 auto;
+	padding-left:0.32rem;
+	height:0.5rem;
+	line-height: 0.5rem;
+}
+#my-slider .search-input{
+	background:url("../images/home-search.png") no-repeat;
+	background-size:cover;
+	display:inline-block;
+	width:6rem;
+	height:0.5rem;
+	padding-left:0.16rem;
+	text-align: left;
+	font-size:0.24rem;
+	vertical-align: middle;
+}
+#my-slider .search-icon{
+	background:url("../images/search-btn.png") no-repeat;
+	background-size:cover;
+	display:inline-block;
+	width:0.35rem;
+	height:0.37rem;	
+	margin-left:0.1rem;
+	vertical-align:middle;
+}
+#nav-bar{
+	width:100%;
+}
+#nav-bar .nav-list{
+	width:100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-moz-justify-content: space-around;
+	-ms-justify-content:space-around;
+	-o-justify-content: space-around;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items:center;
+	-o-align-items: center;
+	align-items: center;
+	padding:0 0 0.1rem;
+	/*margin-left:-0.12rem;*/
+}
+
+#nav-list .nav-bar-name{
+	margin-top:-0.04rem;
+	font-size:0.2rem;
+	height:0.24rem;
+	line-height:0.24rem;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;	
+}
+#nav-list .nav-list-item{
+	padding-left:0.14rem;
+	width:1.2rem;
+}
+.week-hot{
+	background-color:#fff;
+	margin-top:0.2rem;
+	width:100%;
+	overflow: hidden;
+}
+.week-hot .week-hot-header{
+	padding:0.1rem 0.32rem;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items:center;
+	-o-align-items: center;
+	align-items: center;
+	-moz-justify-content: space-between;
+	-ms-justify-content:space-between;
+	-o-justify-content: space-between;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+.week-hot .week-hot-header .week-hot-title{
+	font-size:0.3rem;
+	color:#333;
+	font-weight:600;
+}
+#week-hot .more-txt{
+	font-size:0.24rem;
+	color:#000;
+	/*display:inline-block;
+	height:0.36rem;
+	line-height:0.36rem;*/
+	vertical-align: middle;
+}
+.week-hot .week-hot-header .week-hot-more{
+	/*text-align: left;*/
+}
+.week-hot .more-bg{
+	background:url("../images/more-btn.png") no-repeat;
+	background-size:cover;
+	display:inline-block;
+	width:0.1rem;
+	height:0.18rem;
+	vertical-align: middle;
+}
+#week-hot .mui-media-body{
+	height:auto;
+	margin-top:0;
+}
+#week-hot .game-name{
+	font-size:0.28rem;
+	font-weight: 600;
+	color:#333;
+	margin-top:0;
+}
+#week-hot .game-size{
+	font-size:0.24rem;
+	color:#999;
+	margin-top:0.1rem;
+}
+#week-hot .game-btn{
+	width:1.4rem;
+	height:0.45rem;
+	color:#fff;
+	border-radius:0.06rem;
+	margin:0.2rem auto 0;
+	background-color:#00ba85;
+	text-align: center;
+	line-height:0.45rem;
+	font-size:0.24rem;
+}
+#week-hot .mui-table-view-cell{
+	padding:0.2rem 0 0 0.12rem;
+	margin-right:0;
+	text-align: center;
+	margin-bottom: 0.32rem;
+}
+#week-hot li:nth-of-type(3n+1){
+	padding-left:0.1rem;
+}
+#week-hot .mui-table-view{
+	margin-left:0.13rem;
+}
+.module{
+	background-color:#fff;
+	margin-top:0.2rem;
+	width:100%;
+	overflow: hidden;
+}
+.module .module-header{
+	padding:0.28rem 0.32rem 0.1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.module-header .module-title{
+	font-size:0.3rem;
+	color:#333;
+	font-weight:600;
+}
+.module-header .more-txt{
+	font-size:0.24rem;
+	color:#000;
+	vertical-align: middle;
+}
+.module-header .more-bg{
+	background:url("../images/more-btn.png") no-repeat;
+	background-size:cover;
+	display:inline-block;
+	width:0.1rem;
+	height:0.18rem;
+	vertical-align: middle;
+}
+.module-item .module-game-logo{
+	width:1.28rem !important;
+	height:1.28rem;
+	max-width:1.28rem;
+	line-height: 1.28rem;
+}
+.module .mui-table-view:before{
+	height:0;
+}
+.module .mui-table-view-cell:after{
+	height:0;
+}
+
+.module .mui-media-body .game-name{
+	font-size:0.24rem;
+	color:#333;
+	font-weight: 600;
+	height:0.5rem;
+	line-height:0.5rem;
+}
+.module .mui-media-body .game-size,.game-intro{
+	font-size:0.22rem;
+	margin-top:-0.05rem;
+}
+.module .mui-media-body .game-intro{
+	color:#333;
+}
+.module .mui-media-body .game-btn{
+	width:1.4rem;
+	height:0.45rem;
+	color:#fff;
+	border-radius:0.06rem;
+	background-color:#00ba85;
+	text-align: center;
+	line-height:0.45rem;
+	font-size:0.24rem;
+	margin-top:-1.1rem;
+	z-index:20;
+}
+.oneGame{
+	width:100%;	
+	position:relative;
+	height:3.5rem;
+}
+#oneGame .oneGame-bg{
+	width:100% !important;
+	height:3.5rem !important;
+}
+.oneGame-main{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	
+}
+.oneGame-main .oneGame-left{
+	position:absolute;
+	left:0.3rem;
+	top:1.12rem;	
+}
+.oneGame-main .oneGame-right{
+	position:absolute;
+	right:1.2rem;
+	top:0.2rem;
+	list-style: none;
+}
+.oneGame-main .oneGame-left .oneGame-intro,.oneGame-size{
+	font-size:0.24rem;
+	color:#fff;
+	height:0.24rem;
+	line-height: 0.24rem;
+}
+.oneGame-main .oneGame-left .oneGame-intro{
+	margin-bottom:0.3rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+.oneGame-main .oneGame-right .oneGame-logo>img{
+	width:1.26rem !important;
+	height:1.26rem !important;
+}
+.oneGame-main .oneGame-right .oneGame-name{
+	color:#fff;
+	font-size:0.24rem;
+	margin-top:0.05rem;
+	text-align:center;
+}
+.oneGame-main .game-btn{
+	color:#fff;
+	font-size:0.24rem;
+	position:absolute;
+	right:1.2rem;
+	top:2.4rem;
+	text-align: center;
+	width:1.26rem;
+	background-color:#00ba85;
+	height:0.4rem;
+	line-height: 0.4rem;
+	border-radius:0.06rem;
+}
+.classification{
+	/*padding:0 0.32rem;*/
+	background-color:#fff;
+	margin-top:0.3rem;
+}
+.feature-topic{
+	padding:0 0.32rem;
+	background-color:#fff;
+}
+.game-classification{
+	margin-top:0.1rem;
+	background-color:#dcdcdc;
+}
+.game-classification .game-card-list{
+	margin:0 0.1rem 0.2rem;
+	width:7rem;
+	background-color:#dcdcdc;
+}
+
+.topic-header{
+	height:0.98rem;
+	vertical-align: middle;
+	line-height: 0.98rem;
+	background-color:#fff;
+	/*padding:0 0.32rem;*/
+}
+.game-classification .topic-header{
+	padding: 0 0.32rem;
+}
+/*.recommend .topic-header{*/
+	/*padding:0 0.32rem;*/
+/*}*/
+.topic-logo{
+	width:0.38rem !important;
+	height:0.38rem;
+	display: inline-block;
+	vertical-align: middle;
+}
+.topic-name{
+	vertical-align: middle;
+}
+#scroll2 .topic-item-name{
+	height:0.28rem;
+	line-height:0.28rem;
+}
+#scroll2 .mui-table-view.mui-grid-view{
+	padding-right:0;
+}
+#scroll2 .mui-table-view.mui-grid-view .mui-table-view-cell{
+	margin-right:0;
+
+}
+#scroll2 .classification .feature-topic .mui-table-view.mui-grid-view li:nth-child(4n+2){
+	transform:translate(-9px,0);
+	-ms-transform:translate(-9px,0); /* Internet Explorer */
+	-moz-transform:translate(-9px,0);/* Firefox */
+	-webkit-transform:translate(-9px,0); /* Safari 和 Chrome */
+	-o-transform:translate(-9px,0);
+}
+#scroll2 .classification .feature-topic .mui-table-view.mui-grid-view li:nth-child(4n+3){
+	transform:translate(-5px,0);
+	-ms-transform:translate(-5px,0); /* Internet Explorer */
+	-moz-transform:translate(-5px,0);/* Firefox */
+	-webkit-transform:translate(-5px,0); /* Safari 和 Chrome */
+	-o-transform:translate(-5px,0);
+}
+
+#scroll2 .topic-list li:nth-child(4n+1){
+	padding-left:0;
+	/*transform:translate(5px,0);*/
+	/*-ms-transform:translate(5px,0); !* Internet Explorer *!*/
+	/*-moz-transform:translate(5px,0);!* Firefox *!*/
+	/*-webkit-transform:translate(5px,0); !* Safari 和 Chrome *!*/
+	/*-o-transform:translate(5px,0);*/
+}
+#scroll2 .mui-media-object{
+	width:1.11rem;
+	height:1.11rem;
+}
+#scroll2 .mui-media-body{
+	font-size:0.28rem;
+	color:#333;
+	margin-top:0;
+}
+/*游戏分类卡片*/
+.card-header{
+	text-align: left;
+	padding-left:0.3rem;
+}
+.card-header>span{
+	display: inline-block;
+	vertical-align: middle;
+}
+.card-header .card-icon{
+	width:0.54rem;
+	height:0.54rem;
+	display: inline-block;
+	background:url("../images/games-icon.png") no-repeat;
+	background-size:cover;
+}
+.card-header .card-role{
+	background-position:0 0;
+}
+.card-header .card-shot{
+	background-position:-2.7rem 0;
+}
+.card-header .card-sports{
+	background-position:-3.24rem 0;
+}
+.card-header .card-plain{
+	background-position:-0.54rem 0;
+}
+.card-header .card-chess{
+	background-position:-2.16rem 0;
+}
+.card-header .card-strategy{
+	background-position:-1.08rem 0;
+}
+.card-header .card-adventure{
+	background-position:-1.62rem 0;
+}
+.card-header .card-recreation{
+	background-position:-3.78rem 0;
+}
+.card-header .card-header-txt{
+	font-size:0.28rem;
+	vertical-align: middle;
+}
+.card-header .card-role-txt{
+	color:#00ad90;
+}
+.card-header .card-shot-txt{
+	color:#3a88e3;
+}
+.card-header .card-sports-txt{
+	color:#ff7e02;
+}
+.card-header .card-plain-txt{
+	 color:#7861e3;
+}
+.card-header .card-plain-txt{
+	color:#ff02c1;
+}
+.card-header .card-strategy-txt{
+	color:#35c053;
+}
+.card-header .card-adventure-txt{
+	color:#ff4c4c;
+}
+.card-header .card-recreation-txt{
+	color:#5773df;
+}
+.game-more{
+	background:url("../images/game-more.png") no-repeat;
+	background-size:cover;
+	width:0.12rem;
+	height:0.24rem;
+	margin-left:1rem;
+}
+.game-card-list>li{
+	padding-left:0 !important;
+	margin-bottom:0.1rem;
+	background-color:#fff !important;
+	margin-left:0.1rem;
+	width:3.43rem;
+	padding-bottom:0.1rem !important;
+	padding-top:0.1rem !important;
+}
+.game-card-list>li:nth-child(1),.game-card-list>li:nth-child(2){
+	margin-top:0.1rem;
+}
+.game-card-list>li:nth-child(2n+1){
+	margin-left:0;
+}
+/*角色扮演*/
+.game-container{
+	padding:0.2rem !important;
+}
+.game-container>li{
+	font-size:0.28rem !important;
+	text-align: center;
+	margin-bottom:0.2rem;
+}
+.game-container>li:nth-child(2n+1){
+	padding-left:0 !important;
+}
+/*为你推荐*/
+#recommend .mui-media-object{
+	width:1.56rem;
+	height:1.56rem;
+}
+#recommend .recommend-list{
+	margin-bottom:0.4rem;
+}
+#recommend .topic-header{
+	padding:0 0.32rem;
+}
+#recommend .recommend-list>li{
+	margin-bottom:0.2rem;
+}
+#recommend .recommend-list>li:nth-child(3n+1){
+	padding-left:0 !important;
+}
+#recommend .recommend-list>li:nth-child(3n+2){
+	transform:translate(-7px,0);
+	-ms-transform:translate(-7px,0); /* Internet Explorer */
+	-moz-transform:translate(-7px,0);/* Firefox */
+	-webkit-transform:translate(-7px,0); /* Safari 和 Chrome */
+	-o-transform:translate(-7px,0);
+}
+#recommend .mui-media-body{
+	font-size:0.28rem;
+	font-weight:600;
+	color:#000;
+}
+/*榜单*/
+.list-bar{
+	position:relative;
+	box-shadow:none;
+	-webkit-box-shadow: none;
+	height:0.8rem;
+	line-height:0.8rem;
+	background-color:#fff;
+	margin-top:0.3rem;
+	z-index:200;
+}
+.list-container{
+	left:0;
+	top:1.2rem;
+}
+.list-bar .mui-tab-label{
+	display: inline-block;
+	width:1.3rem;
+	height:0.54rem;
+	line-height: 0.54rem;
+	text-align: center;
+	border:1px solid #00ba85;
+	border-radius:0.54rem;
+	color:#00ba85;
+	font-size:0.28rem;
+	letter-spacing: 2px;
+}
+.list-bar .mui-active .mui-tab-label{
+	color:#fff;
+	background-color:#00ba85;
+}
+/*新游榜*/
+#new-games-list .new-games-item,#popularity-list .new-games-item,#bestseller-list .new-games-item{
+	padding:0 0.32rem;
+	height:1.75rem;
+	line-height:1.75rem;
+	position:relative;
+}
+.new-games-item .rank{
+	width:0.38rem;
+	height:0.44rem;
+	position:absolute;
+	line-height: 0.41rem;
+	font-size:0.28rem;
+	text-align:center;
+	left:0.32rem;
+	top:50%;
+	margin-top:-0.22rem;
+}
+.rank-1,.rank-2,.rank-3{
+	background:url("../images/rank.png") no-repeat;
+	background-size:cover;
+	color:#fff;
+}
+.rank-1{
+	background-position:0 0;
+}
+.rank-2{
+	background-position:-0.38rem 0;
+}
+.rank-3{
+	background-position:-0.76rem 0;
+}
+
+.new-games-main .mui-table-view-cell:after{
+	left:0;
+}
+#new-games-list .new-games-item .rank-content{
+	position:absolute;
+	margin:0;
+	padding:0;
+	height:1.3rem;
+	line-height: 1.3rem;
+	left:0.96rem;
+	top:50%;
+	margin-top:-0.65rem;
+}
+#popularity-list .new-games-item .rank-content{
+	position:absolute;
+	margin:0;
+	padding:0;
+	height:1.3rem;
+	line-height: 1.3rem;
+	left:0.96rem;
+	top:50%;
+	margin-top:-0.65rem;
+}
+#bestseller-list .new-games-item .rank-content{
+	position:absolute;
+	margin:0;
+	padding:0;
+	height:1.3rem;
+	line-height: 1.3rem;
+	left:0.96rem;
+	top:50%;
+	margin-top:-0.65rem;
+}
+.rank-game-logo{
+	width:1.26rem !important;
+	height:1.26rem !important;
+	line-height:1.26rem;
+	max-width:1.26rem !important;
+}
+.rank-game-des .rank-game-name{
+	font-size:0.32rem;
+	height:0.32rem;
+	line-height:0.32rem;
+	color:#000;
+	font-weight:600;
+}
+.rank-game-des .rank-game-score{
+	height:0.24rem;
+	line-height:0.24rem;
+	margin:0.15rem 0;
+}
+.rank-game-des .rank-game-intro{
+	font-size:0.28rem;
+	color:#666;
+	height:0.3rem;
+	line-height:0.3rem;
+	width:4.5rem;
+}
+.rank-game-btn{
+	position:absolute;
+	right:0.32rem;
+	top:0.22rem;
+	width:1.3rem;
+	height:0.5rem;
+	color:#fff;
+	font-size:0.24rem;
+	line-height:0.5rem;
+	background-color:#00ba85;
+	border-radius:6px;
+	text-align:center;
+	letter-spacing: 2px;
+}
+/*底部导航*/
+#home-tab{
+	height:1.08rem !important;
+	box-sizing:border-box;
+	bottom:0;
+}
+#home-tab .mui-tab-item{
+	height:1.08rem !important;
+}
+#home-tab .home-tab-icon{
+	background:url('../images/home-tab-img.png') no-repeat;
+	display: inline-block;
+	width:54px;
+	height:45px;
+	transform: scale(0.5,0.5);
+	-webkit-transform:scale(0.5,0.5) ;
+	margin-top:-0.28rem;
+}
+#home-tab .home-icon-game{
+	background-position:0 -135px;
+}
+#home-tab .home-icon-discover{
+	background-position:0 0;
+}
+#home-tab .home-icon-friends{
+	background-position:0 -45px;
+}
+#home-tab .home-icon-mine{
+	background-position:0 -90px;
+}
+#home-tab .mui-tab-label{
+	margin-top: -14px;
+	font-size:0.24rem;
+	color:#000;
+	text-align: center;
+	height:0.44rem;
+	line-height: 0.44rem;
+}
+#home-tab .mui-active .home-tab-icon{
+	background-position-x: -54px;
+}
+#home-tab .mui-active .mui-tab-label{
+	color:#00ba85;
+}
+/*发现页*/
+#discover{
+	background-color:#e0e0e0;
+}
+#discover,#discover .discover-main{
+	width:100%;
+}
+#discover .mui-table-view:before,#discover .mui-table-view:after{
+	height:0;
+}
+#discover .mui-table-view-cell:after{
+	height:0;
+}
+#discover .discover-main .discover-header{
+	background-color:#00ba85;
+	font-size:0.32rem;
+	color:#fff;
+	height:0.8rem;
+	line-height:0.8rem;
+	text-indent: 0.32rem;
+}
+#discover .discover-module{
+	background-color:#e4e2e2;
+	padding-top:0.16rem;
+}
+#discover .discover-module>li{
+	background-color:#fff;
+	height:0.96rem;
+	line-height:0.96rem;
+	position:relative;
+}
+#discover .discover-module>li:not(:first-child){
+	margin-top:0.16rem;
+}
+#discover .discover-activity-icon{
+	width:0.6rem;
+	height:0.6rem;
+	position:absolute;
+	background:url('../images/activity-center-icon.png') no-repeat;
+	background-size:cover;
+	left:0.42rem;
+	top:50%;
+	transform:translate(0,-50%);
+}
+#discover .discover-package-icon{
+	width:0.6rem;
+	height:0.6rem;
+	position:absolute;
+	background:url('../images/package-center-icon.png') no-repeat;
+	background-size:cover;
+	left:0.42rem;
+	top:50%;
+	transform:translate(0,-50%);
+}
+#discover .discover-name{
+	font-size:0.32rem;
+	color:#333;
+	position: absolute;
+	top:50%;
+	left:1.26rem;
+	transform:translate(0,-50%);
+	height:0.6rem;
+	line-height: 0.6rem;
+}
+#discover .more-arrow{
+	position: absolute;
+	right:0.42rem;
+	top:50%;
+	transform:translate(0,-50%);
+	width:0.2rem;
+	height:0.36rem;
+	background:url('../images/more-btn.png') no-repeat;
+	background-size:cover;
+}
+/*我的*/
+#mine{
+	background-color:#ededed;
+}
+#mine .mine-heaader{
+	height:0.8rem;
+	background-color:#00ba85;
+	position:relative;
+}
+#mine .mine-heaader .mine-header-title{
+	font-size:0.36rem;
+	position:absolute;
+	left:0.32rem;
+	top:50%;
+	transform: translate(0,-50%);
+	color:#fff;
+}
+#mine .mine-heaader .mine-setting-icon{
+	width: 0.42rem;
+	height:0.42rem;
+	position: absolute;
+	top:50%;
+	transform: translate(0,-50%);
+	right:0.3rem;
+}
+#mine .mine-info{
+	position:relative;
+	height:2.93rem;
+	background-color:#fff;
+}
+#mine .mine-info .mine-info-intro{
+	position:relative;
+	height:2rem;
+}
+#mine .mine-info-intro:after{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 1px;
+	content: '';
+	-webkit-transform: scaleY(.5);
+	transform: scaleY(.5);
+	background-color: #e0e0e0;
+}
+#mine .mine-info .mine-logo{
+	width:1.38rem;
+	height:1.38rem;
+	position:absolute;
+	left:0.34rem;
+	top:0.31rem;
+}
+#mine .mine-info .mine-name{
+	font-size:0.32rem;
+	color:#333;
+	position:absolute;
+	left:1.86rem;
+	top:0.38rem;
+}
+#mine .mine-info .mine-name .mine-gender{
+	width:0.32rem;
+	height:0.32rem;
+	display: inline-block;
+	margin-left:0.2rem;
+	vertical-align: middle;
+}
+#mine .mine-info .mine-contact{
+	position: absolute;
+	top:1.38rem;
+	left:1.86rem;
+	font-size:0.24rem;
+	color:#b4b4b4;
+}
+#mine .mine-info .mine-contact i{
+	font-style:normal;
+}
+#mine .mine-info .mine-contact>span:nth-of-type(2){
+	display: inline-block;
+	margin-left:0.25rem;
+}
+#mine .mine-info .mine-more{
+	position: absolute;
+	top:0.38rem;
+	right:0.5rem;
+	width:0.17rem;
+	height:0.3rem;
+}
+#mine .mine-attention-fans{
+	position: absolute;
+	height:0.93rem;
+	line-height: 0.93rem;
+	font-size:0.3rem;
+	color:#333;
+	top:2rem;
+	left:0.85rem;
+	text-align: center;
+}
+#mine .mine-attention-fans i{
+	font-style: normal;
+}
+#mine .mine-attention-fans .mine-divider{
+	width:1px;
+	height:0.93rem;
+	position: absolute;
+	top:0;
+	left:2.75rem;
+}
+#mine .mine-attention-fans .mine-fans{
+	margin-left:2.73rem;
+	display: inline-block;
+}
+/*我的列表*/
+#mine .mine-options{
+	margin-top:0.18rem;
+}
+#mine .mine-options .mine-list{
+	background-color:#fff;
+	margin-top:0.18rem;
+}
+#mine .mine-list .mine-item{
+	height:0.95rem;
+	padding:0 0.5rem;
+	line-height:0.95rem;
+	position: relative;
+}
+#mine .mine-list .mine-item:after{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 1px;
+	content: '';
+	-webkit-transform: scaleY(.5);
+	transform: scaleY(.5);
+	background-color: #e0e0e0;
+}
+#mine .mine-list .mine-item .mine-item-logo{
+	width:0.44rem;
+	height:0.44rem;
+	vertical-align: middle;
+}
+#mine .mine-list .mine-item .mine-item-name{
+	font-size:0.32rem;
+	color:#333;
+	display: inline-block;
+	margin-left:0.32rem;
+	vertical-align: middle;
+}
+#mine .mine-list .mine-item .mine-balance{
+	position: absolute;
+	top:50%;
+	transform:translate(0,-50%);
+	right:0.73rem;
+	color:#666666;
+}
+#mine .mine-list .mine-item i{
+	font-style:normal;
+}
+
+#mine .mine-list .mine-item .mine-item-more{
+	width:0.1rem;
+	height:0.16rem;
+	position: absolute;
+	top:50%;
+	transform:translate(0,-50%);
+	right:0.5rem;
+}

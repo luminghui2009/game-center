@@ -1,0 +1,178 @@
+/*头部*/
+body{
+    background-color:#fff;
+}
+.package-center-header{
+    width:100%;
+    background-color:#00ba85;
+    position:relative;
+    height:0.96rem;
+    line-height: 0.96rem;
+}
+.package-center-header .back,.package-center-header .package-center-name{
+    position:absolute;
+    top:50%;
+    transform:translate(0,-50%);
+    height:0.47rem;
+    line-height:0.47rem;
+}
+.package-center-header .back{
+    width:0.27rem;
+    background:url('../images/back.png') no-repeat;
+    background-size:cover;
+    left:0.2rem;
+}
+.package-center-header .package-center-name{
+    color:#fff;
+    font-size:0.32rem;
+    left:0.57rem;
+}
+/*顶部选项卡*/
+
+#segmentedControl{
+    height:0.82rem;
+    border-bottom:1px solid #ccc;
+    box-sizing:border-box;
+    background-color:#fcfcfc;
+}
+#segmentedControl .mui-control-item{
+    font-size:0.3rem;
+    color:#333;
+    text-align: center;
+    height:0.82rem;
+    line-height:0.82rem;
+}
+#segmentedControl .mui-active{
+    color:#00ba85;
+    border-bottom:0.06rem solid #00ba85;
+    text-align:center;
+}
+/*热门礼包*/
+/*搜索*/
+.mui-content{
+    background-color:#fff;
+}
+#package-list{
+    background-color:#fff;
+    border-bottom:none;
+}
+#package-list .mui-indexed-list-search{
+    border-bottom:none;
+}
+.package-search{
+    margin:0.1rem 0.24rem;
+    width:6.72rem;
+    height:0.5rem;
+    background:url('../images/packageCente-searchBg.png') no-repeat;
+    background-size:cover;
+    text-align:center;
+    line-height: 0.5rem;
+    background-color:#fff;
+}
+.package-search .package-search-icon{
+    display: inline-block;
+    width:0.25rem;
+    height:0.26rem;
+    background:url('../images/search-icon.png') no-repeat;
+    background-size:cover;
+    vertical-align: middle;
+}
+.package-search .package-search-txt{
+    font-size:0.24rem;
+    color:#999;
+}
+/*礼物列表*/
+#package-list{
+    border-top:none;
+}
+#package-list .mui-table-view-divider:after{
+    height:0;
+}
+#package-list .mui-table-view-cell:after{
+    left:0;
+    background-color:#ebebeb;
+}
+.mui-indexed-list-group{
+    font-size:0.28rem;
+    padding-top: 0.08rem;
+    padding-bottom:0.08rem;
+    color:#333;
+}
+#package-list .mui-indexed-list-item{
+    position:relative;
+    height:1.2rem;
+    line-height:1.2rem;
+}
+#package-list .mui-indexed-list-item .gift-game-logo{
+    width:0.9rem;
+    height:0.9rem;
+    position:absolute;
+    top:50%;
+    transform:translate(0,-50%);
+    left:0.24rem;
+}
+#package-list .mui-indexed-list-item .gift-game-name{
+    position:absolute;
+    top:50%;
+    left:1.54rem;
+    transform:translate(0,-50%);
+    font-size:0.28rem;
+    color:#333;
+}
+#package-list .mui-indexed-list-item .gift-num{
+    position:absolute;
+    top:50%;
+    transform:translate(0,-50%);
+    left:4.9rem;
+    font-size:0.24rem;
+    color:#666;
+}
+#package-list .mui-indexed-list-item .gift-num>span{
+    color:#00ba85;
+}
+/*我的礼包*/
+#my-package .my-package-list{
+    background-color:#fff;
+    padding:0 0.4rem;
+}
+#my-package .my-package-list .my-package-item{
+    padding:0.25rem 0;
+    position:relative;
+    height:1.2rem;
+}
+#my-package .my-package-list .my-package-item .my-package-logo{
+    width:0.9rem;
+    height:0.9rem;
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translate(0,-50%);
+}
+#my-package .my-package-list .my-package-item .my-package-info{
+    position:absolute;
+    left:1.14rem;
+    top:50%;
+    transform:translate(0,-50%);
+    height:0.9rem;
+    line-height: 0.9rem;
+}
+#my-package .my-package-list .my-package-item .my-package-name,#my-package .my-package-list .my-package-item .my-package-type{
+    font-size:0.3rem;
+    color:#333;
+    vertical-align: middle;
+}
+#my-package .my-package-list .my-package-item .my-package-type{
+    padding-left:0.1rem;
+    font-size:0.26rem;
+}
+#my-package .my-package-list .my-package-item .my-package-detail{
+    width:0.2rem;
+    height:0.36rem;
+    position:absolute;
+    background:url('../../../images/more-btn.png') no-repeat;
+    background-size:cover;
+    right:0;
+    top:50%;
+    transform:translate(0,-50%) scale(0.5,0.5);
+
+}

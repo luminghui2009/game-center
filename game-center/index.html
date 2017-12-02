@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Game Center</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="full-screen" content="yes">
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="./css/mui.min.css"/>
+    <link rel="stylesheet" href="./css/reset.min.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/friends-circle.css">
+    <!--App自定义的css-->
+    <!--<link rel="stylesheet" type="text/css" href="../css/app.css" />-->
+</head>
+<body>
+<style>
+    .mui-control-content {
+        background-color: white;
+    }
+
+    .mui-control-content .mui-loading {
+        margin-top: 100px;
+    }
+    .mui-content{
+        margin-bottom:1.08rem;
+    }
+</style>
+<div class="mui-content">
+    <!--游戏-->
+    <div id="slider" class="mui-slider mui-active mui-control-content">
+        <div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+            <a class="mui-control-item" href="#item1mobile">
+                精选
+            </a>
+            <a class="mui-control-item" href="#item2mobile">
+                分类
+            </a>
+            <a class="mui-control-item" href="#item3mobile">
+                榜单
+            </a>
+        </div>
+        <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+        <div class="mui-slider-group slider-game-chosen">
+            <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+                <div id="scroll1" class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                            <div class="mui-slider" id="my-slider">
+                                <div class="mui-slider-group mui-slider-loop">
+                                    <!--支持循环，需要重复图片节点-->
+                                    <div class="mui-slider-item mui-slider-item-duplicate">
+                                        <a href="#"><img src="images/banner1.jpg" /></a>
+                                    </div>
+                                    <div class="mui-slider-item">
+                                        <a href="#"><img src="images/banner1.jpg" /></a>
+                                    </div>
+                                    <div class="mui-slider-item">
+                                        <a href="#"><img src="images/banner1.jpg" /></a>
+                                    </div>
+                                    <div class="mui-slider-item mui-slider-item-duplicate">
+                                        <a href="#"><img src="images/banner1.jpg" /></a>
+                                    </div>
+                                </div>
+                                <div class="mui-slider-indicator" id="focus-dot">
+                                    <div class="mui-indicator mui-active"></div>
+                                    <div class="mui-indicator"></div>
+                                </div>
+                                <div class="search">
+                                    <span class="search-input">超时空机战</span>
+                                    <i class="search-icon"></i>
+                                </div>
+                            </div>
+                            <nav class="nav-header" id="nav-bar">
+                                <ul class="mui-table-view mui-grid-view mui-row nav-list" id="nav-list">
+                                    <li class="mui-table-view-cell mui-media nav-list-item">
+                                        <a href="javascript:;">
+                                            <img src="images/package.png" style='width:0.81rem;height:0.66rem;'  class="mui-media-object"/>
+                                            <div class="mui-media-body nav-bar-name">礼包</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media nav-list-item">
+                                        <a href="javascript:;">
+                                            <img src="images/package.png" style='width:0.81rem;height:0.66rem;'  class="mui-media-object"/>
+                                            <div class="mui-media-body nav-bar-name">活动</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media nav-list-item">
+                                        <a href="javascript:;">
+                                            <img src="images/package.png" style='width:0.81rem;height:0.66rem;'  class="mui-media-object"/>
+                                            <div class="mui-media-body nav-bar-name">新游推荐</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media nav-list-item">
+                                        <a href="javascript:;">
+                                            <img src="images/package.png" style='width:0.81rem;height:0.66rem;'  class="mui-media-object"/>
+                                            <div class="mui-media-body nav-bar-name">下载</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media nav-list-item">
+                                        <a href="javascript:;">
+                                            <img src="images/package.png" style='width:0.81rem;height:0.66rem;'  class="mui-media-object"/>
+                                            <div class="mui-media-body nav-bar-name">反馈</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="week-hot" id="week-hot">
+                                <p class="week-hot-header">
+                                    <span class="week-hot-title">本周热门推荐</span>
+                                    <span class="week-hot-more">
+						<a href="javascript:;" class="more-txt">更多</a>
+						<i class="more-bg"></i>
+					</span>
+                                </p>
+                                <ul class="mui-table-view mui-grid-view mui-row">
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                        <a href="javascript:;">
+                                            <img src="images/game-logo.png" style='width:1.56rem;height:1.56rem;' class="mui-media-object"/>
+                                            <div class="mui-media-body">
+                                                <p class="game-name">途游斗地主</p>
+                                                <p class="game-size">32.65M</p>
+                                                <div class="game-btn">下载</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                        <a href="javascript:;">
+                                            <img src="images/game-logo.png" style='width:1.56rem;height:1.56rem;' class="mui-media-object"/>
+                                            <div class="mui-media-body">
+                                                <p class="game-name">途游斗地主</p>
+                                                <p class="game-size">32.65M</p>
+                                                <div class="game-btn">下载</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                        <a href="javascript:;">
+                                            <img src="images/game-logo.png" style='width:1.56rem;height:1.56rem;' class="mui-media-object"/>
+                                            <div class="mui-media-body">
+                                                <p class="game-name">途游斗地主</p>
+                                                <p class="game-size">32.65M</p>
+                                                <div class="game-btn">下载</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                        <a href="javascript:;">
+                                            <img src="images/game-logo.png" style='width:1.56rem;height:1.56rem;' class="mui-media-object"/>
+                                            <div class="mui-media-body">
+                                                <p class="game-name">途游斗地主</p>
+                                                <p class="game-size">32.65M</p>
+                                                <div class="game-btn">下载</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                        <a href="javascript:;">
+                                            <img src="images/game-logo.png" style='width:1.56rem;height:1.56rem;' class="mui-media-object"/>
+                                            <div class="mui-media-body">
+                                                <p class="game-name">途游斗地主</p>
+                                                <p class="game-size">32.65M</p>
+                                                <div class="game-btn">下载</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                        <a href="javascript:;">
+                                            <img src="images/game-logo.png" style='width:1.56rem;height:1.56rem;' class="mui-media-object"/>
+                                            <div class="mui-media-body">
+                                                <p class="game-name">途游斗地主</p>
+                                                <p class="game-size">32.65M</p>
+                                                <div class="game-btn">下载</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="module">
+                                <!--模块标题-->
+                                <p class="module-header">
+                                    <span class="module-title">新品上线，连玩3小时</span>
+                                    <span class="module-more">
+						            <a href="javascript:;" class="more-txt">更多</a>
+						            <i class="more-bg"></i>
+					            </span>
+                                </p>
+                                <!--游戏模块列表-->
+                                <ul class="mui-table-view">
+                                    <li class="mui-table-view-cell mui-media module-item">
+                                        <a href="javascript:;">
+                                            <img src="http://alcache.idianyou.cn/dianyou/data/appendix/img/20171120/ff8080815fb93dec015fd7340cd30151.png" class="mui-media-object mui-pull-left module-game-logo"/>
+                                            <div class="mui-media-body">
+                                                <p class="game-name">终结者2</p>
+                                                <p class="game-size">564MB&nbsp;|&nbsp;动作射击</p>
+                                                <p class="game-intro">极致的快节奏枪战竞技体验</p>
+                                                <p class="mui-pull-right game-btn">下载</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media module-item">
+                                        <a href="javascript:;">
+                                            <img src="http://alcache.idianyou.cn/dianyou/data/appendix/img/20171120/ff8080815fb93dec015fd7340cd30151.png" class="mui-media-object mui-pull-left module-game-logo"/>
+                                            <div class="mui-media-body">
+                                                <p class="game-name">终结者2</p>
+                                                <p class="game-size">564MB&nbsp;|&nbsp;动作射击</p>
+                                                <p class="game-intro">极致的快节奏枪战竞技体验</p>
+                                                <p class="mui-pull-right game-btn">下载</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media module-item">
+                                        <a href="javascript:;">
+                                            <img src="http://alcache.idianyou.cn/dianyou/data/appendix/img/20171120/ff8080815fb93dec015fd7340cd30151.png" class="mui-media-object mui-pull-left module-game-logo"/>
+                                            <div class="mui-media-body">
+                                                <p class="game-name">终结者2</p>
+                                                <p class="game-size">564MB&nbsp;|&nbsp;动作射击</p>
+                                                <p class="game-intro">极致的快节奏枪战竞技体验</p>
+                                                <p class="mui-pull-right game-btn">下载</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media module-item">
+                                        <a href="javascript:;">
+                                            <img src="http://alcache.idianyou.cn/dianyou/data/appendix/img/20171120/ff8080815fb93dec015fd7340cd30151.png" class="mui-media-object mui-pull-left module-game-logo"/>
+                                            <div class="mui-media-body">
+                                                <p class="game-name">终结者2</p>
+                                                <p class="game-size">564MB&nbsp;|&nbsp;动作射击</p>
+                                                <p class="game-intro">极致的快节奏枪战竞技体验</p>
+                                                <p class="mui-pull-right game-btn">下载</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media module-item">
+                                        <a href="javascript:;">
+                                            <img src="http://alcache.idianyou.cn/dianyou/data/appendix/img/20171120/ff8080815fb93dec015fd7340cd30151.png" class="mui-media-object mui-pull-left module-game-logo"/>
+                                            <div class="mui-media-body">
+                                                <p class="game-name">终结者2</p>
+                                                <p class="game-size">564MB&nbsp;|&nbsp;动作射击</p>
+                                                <p class="game-intro">极致的快节奏枪战竞技体验</p>
+                                                <p class="mui-pull-right game-btn">下载</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media module-item">
+                                        <a href="javascript:;">
+                                            <img src="http://alcache.idianyou.cn/dianyou/data/appendix/img/20171120/ff8080815fb93dec015fd7340cd30151.png" class="mui-media-object mui-pull-left module-game-logo"/>
+                                            <div class="mui-media-body">
+                                                <p class="game-name">终结者2</p>
+                                                <p class="game-size">564MB&nbsp;|&nbsp;动作射击</p>
+                                                <p class="game-intro">极致的快节奏枪战竞技体验</p>
+                                                <p class="mui-pull-right game-btn">下载</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!--广告-->
+                                <div class="oneGame" id="oneGame">
+                                    <img src="http://alcache.idianyou.cn/dianyou/data/home/specialtemplate/20170715/ff8080815d40bac2015d457ac5640047.jpg" class="oneGame-bg"/>
+                                    <div class="oneGame-main">
+                                        <div class="oneGame-left">
+                                            <p class="oneGame-intro">超越《龙之谷》的网易精品游戏</p>
+                                            <p class="oneGame-size">500MB</p>
+                                        </div>
+                                        <ul class="oneGame-right">
+                                            <li class="oneGame-logo"><img src="http://alcache.idianyou.cn/dianyou/data/appendix/img/20170627/ff8080815cd3a1de015ce8c17406011f.png"/></li>
+                                            <li class="oneGame-name">勇士X勇士</li>
+                                        </ul>
+                                        <div class="game-btn">下载</div>
+
+                                    </div>
+                                </div>
+                                <!--you-->
+
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div id="item2mobile" class="mui-slider-item mui-control-content">
+                <div id="scroll2" class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <div class="classification">
+                            <div class="feature-topic">
+                                <div class="topic-header">
+                                    <img src="images/feature-topic.png" class="topic-logo"/>
+                                    <span class="topic-name">特色专题</span>
+                                </div>
+                                <ul class="mui-table-view mui-grid-view topic-list">
+                                    <li class="mui-table-view-cell mui-col-xs-3">
+                                        <a href="javascript:;">
+                                            <img src="images/topic1.png" class="mui-media-object"/>
+                                            <div class="mui-media-body topic-item-name">急速体验</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-3">
+                                        <a href="javascript:;">
+                                            <img src="images/topic2.png" class="mui-media-object"/>
+                                            <div class="mui-media-body topic-item-name">高画质</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-3">
+                                        <a href="javascript:;">
+                                            <img src="images/topic3.png" class="mui-media-object"/>
+                                            <div class="mui-media-body topic-item-name">轻松一刻</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-3">
+                                        <a href="javascript:;">
+                                            <img src="images/topic4.png" class="mui-media-object"/>
+                                            <div class="mui-media-body topic-item-name">二次元</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-3">
+                                        <a href="javascript:;">
+                                            <img src="images/topic5.png" class="mui-media-object"/>
+                                            <div class="mui-media-body topic-item-name">断网可玩</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-3">
+                                        <a href="javascript:;">
+                                            <img src="images/topic6.png" class="mui-media-object"/>
+                                            <div class="mui-media-body topic-item-name">实时对战</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-3">
+                                        <a href="javascript:;">
+                                            <img src="images/topic7.png" class="mui-media-object"/>
+                                            <div class="mui-media-body topic-item-name">男生必玩</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-3">
+                                        <a href="javascript:;">
+                                            <img src="images/topic8.png" class="mui-media-object"/>
+                                            <div class="mui-media-body topic-item-name">女生必玩</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="game-classification">
+                                <div class="topic-header">
+                                    <img src="images/game-classify.png" class="topic-logo"/>
+                                    <span class="topic-name">游戏分类</span>
+                                </div>
+                                <ul class="mui-table-view mui-grid-view game-card-list">
+                                    <li class="mui-table-view-cell mui-col-xs-6">
+                                        <p class="card-header">
+                                            <span class="card-icon card-role"></span>
+                                            <span class="card-header-txt card-role-txt">角色扮演</span>
+                                            <span class="game-more"></span>
+                                        </p>
+                                        <ul class="mui-table-view mui-grid-view game-container">
+                                            <li class="mui-table-view-cell mui-col-xs-6">多人在线</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">ARPG</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">回合制</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">卡牌</li>
+                                        </ul>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-6">
+                                        <p class="card-header">
+                                            <span class="card-icon card-shot"></span>
+                                            <span class="card-header-txt card-shot-txt">动作射击</span>
+                                            <span class="game-more"></span>
+                                        </p>
+                                        <ul class="mui-table-view mui-grid-view game-container">
+                                        <li class="mui-table-view-cell mui-col-xs-6">射击</li>
+                                        <li class="mui-table-view-cell mui-col-xs-6">太空</li>
+                                        <li class="mui-table-view-cell mui-col-xs-6">枪战</li>
+                                        <li class="mui-table-view-cell mui-col-xs-6">动作</li>
+                                        </ul>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-6">
+                                        <p class="card-header">
+                                            <span class="card-icon card-role card-sports"></span>
+                                            <span class="card-header-txt card-sports-txt">体育竞技</span>
+                                            <span class="game-more"></span>
+                                        </p>
+                                        <ul class="mui-table-view mui-grid-view game-container">
+                                        <li class="mui-table-view-cell mui-col-xs-6">足球</li>
+                                        <li class="mui-table-view-cell mui-col-xs-6">篮球</li>
+                                        <li class="mui-table-view-cell mui-col-xs-6">运动</li>
+                                        <li class="mui-table-view-cell mui-col-xs-6">竞技</li>
+                                        </ul>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-6">
+                                        <p class="card-header">
+                                            <span class="card-icon card-plain"></span>
+                                            <span class="card-header-txt card-plain-txt">飞行竞速</span>
+                                            <span class="game-more"></span>
+                                        </p>
+                                        <ul class="mui-table-view mui-grid-view game-container">
+                                        <li class="mui-table-view-cell mui-col-xs-6">飞行</li>
+                                        <li class="mui-table-view-cell mui-col-xs-6">赛车</li>
+                                        <li class="mui-table-view-cell mui-col-xs-6">摩托</li>
+                                        <li class="mui-table-view-cell mui-col-xs-6"></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-6">
+                                        <p class="card-header">
+                                            <span class="card-icon card-chess"></span>
+                                            <span class="card-header-txt card-chess-txt">棋牌桌游</span>
+                                            <span class="game-more"></span>
+                                        </p>
+                                        <ul class="mui-table-view mui-grid-view game-container">
+                                            <li class="mui-table-view-cell mui-col-xs-6">斗地主</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">德州扑克</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">麻将</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">棋类</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">桌游</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6"></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-6">
+                                        <p class="card-header">
+                                            <span class="card-icon card-strategy"></span>
+                                            <span class="card-header-txt card-strategy-txt">经营策略</span>
+                                            <span class="game-more"></span>
+                                        </p>
+                                        <ul class="mui-table-view mui-grid-view game-container">
+                                            <li class="mui-table-view-cell mui-col-xs-6">塔防</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">策略</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">经营</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">养成</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">战争</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6"></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-6">
+                                        <p class="card-header">
+                                            <span class="card-icon card-adventure"></span>
+                                            <span class="card-header-txt card-adventure-txt">冒险解谜</span>
+                                            <span class="game-more"></span>
+                                        </p>
+                                        <ul class="mui-table-view mui-grid-view game-container">
+                                            <li class="mui-table-view-cell mui-col-xs-6">探索类</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">解谜类</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">冒险类</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">闯关类</li>
+                                        </ul>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-6">
+                                        <p class="card-header">
+                                            <span class="card-icon card-recreation"></span>
+                                            <span class="card-header-txt card-recreation-txt">休闲益智</span>
+                                            <span class="game-more"></span>
+                                        </p>
+                                        <ul class="mui-table-view mui-grid-view game-container">
+                                            <li class="mui-table-view-cell mui-col-xs-6">消除</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">跑酷</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">捕鱼</li>
+                                            <li class="mui-table-view-cell mui-col-xs-6">休闲</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="recommend" id="recommend">
+                                <div class="topic-header">
+                                    <img src="images/recommend.png" class="topic-logo recommend-logo"/>
+                                    <span class="topic-name topic-item-name">为你推荐</span>
+                                </div>
+                                <ul class="mui-table-view mui-grid-view  recommend-list">
+                                    <li class="mui-table-view-cell mui-col-xs-4">
+                                        <a href="javascript:;">
+                                            <img src="http://alcache.idianyou.cn/dianyou/data/appendix/img/20170531/ff8080815c42ecfe015c5c99a645009a.png" class="mui-media-object"/>
+                                            <div class="mui-media-body topic-item-name">合金子弹</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-4">
+                                        <a href="javascript:;">
+                                            <img src="http://alcache.idianyou.cn/dianyou/data/appendix/img/20170531/ff8080815c42ecfe015c5c99a645009a.png" class="mui-media-object"/>
+                                            <div class="mui-media-body topic-item-name">合金子弹</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-4">
+                                        <a href="javascript:;">
+                                            <img src="http://alcache.idianyou.cn/dianyou/data/appendix/img/20170531/ff8080815c42ecfe015c5c99a645009a.png" class="mui-media-object"/>
+                                            <div class="mui-media-body topic-item-name">合金子弹</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-4">
+                                        <a href="javascript:;">
+                                            <img src="http://alcache.idianyou.cn/dianyou/data/appendix/img/20170725/ff8080815d68ef8f015d7788eed8004e.png" class="mui-media-object"/>
+                                            <div class="mui-media-body topic-item-name">合金子弹</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-4">
+                                        <a href="javascript:;">
+                                            <img src="http://alcache.idianyou.cn/dianyou/data/appendix/img/20170725/ff8080815d68ef8f015d7788eed8004e.png" class="mui-media-object"/>
+                                            <div class="mui-media-body topic-item-name">合金子弹</div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-col-xs-4">
+                                        <a href="javascript:;">
+                                            <img src="http://alcache.idianyou.cn/dianyou/data/appendix/img/20170725/ff8080815d68ef8f015d7788eed8004e.png" class="mui-media-object"/>
+                                            <div class="mui-media-body topic-item-name">合金子弹</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--<div class="mui-loading">-->
+                            <!--<div class="mui-spinner">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+            <div id="item3mobile" class="mui-slider-item mui-control-content">
+                <nav class="mui-bar mui-bar-tab list-bar">
+                <a id="defaultTab" class="mui-control-item mui-tab-item mui-active" href="#new-games-list">
+                <span class="mui-tab-label">新游榜</span>
+                </a>
+                <a class="mui-control-item mui-tab-item" href="#popularity-list">
+                <span class="mui-tab-label">人气榜</span>
+                </a>
+                <a class="mui-control-item mui-tab-item" href="#bestseller-list">
+                <span class="mui-tab-label">畅销榜</span>
+                </a>
+                </nav>
+                <div id="scroll3" class="mui-scroll-wrapper">
+                    <div class="mui-scroll list-container">
+                          <div class="mui-control-content new-games-list mui-active" id="new-games-list">
+                                    <ul class="mui-table-view new-games-main">
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank rank-1">1</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank rank-2">2</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank rank-3">3</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">4</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">5</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">6</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">7</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">8</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank rank-1">1</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank rank-2">2</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank rank-3">3</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">4</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">5</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">6</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">7</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">8</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <div>
+
+                                        </div>
+                                    </ul>
+                                </div>
+                          <div class="mui-control-content" id="popularity-list">
+                                    <ul class="mui-table-view new-games-main">
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank rank-1">1</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">阴阳师</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank rank-2">2</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">阴阳师</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank rank-3">3</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">阴阳师</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">4</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">5</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">6</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">7</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">8</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <div>
+
+                                        </div>
+                                    </ul>
+                                </div>
+                          <div class="mui-control-content" id="bestseller-list">
+                                    <ul class="mui-table-view new-games-main">
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank rank-1">1</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">烈火一刀</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank rank-2">2</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">烈火一刀</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank rank-3">3</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">烈火一刀</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">4</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">5</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">5</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">5</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <li class="mui-table-view-cell mui-media new-games-item">
+                                            <span class="rank">5</span>
+                                            <a href="javascript:void(0);" class="rank-content">
+                                                <img src="images/new-games-list.png" class="mui-media-object mui-pull-left rank-game-logo" />
+                                                <div class="mui-media-body rank-game-des">
+                                                    <p class="rank-game-name">崩坏学园2</p>
+                                                    <ul class="rank-game-score rating">
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                        <li class="rating-item"></li>
+                                                    </ul>
+                                                    <p class="rank-game-intro mui-ellipsis">游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦游戏介绍游戏介绍游戏介绍哦</p>
+                                                </div>
+                                            </a>
+                                            <div class="rank-game-btn">下载游戏</div>
+                                        </li>
+                                        <div>
+
+                                        </div>
+                                    </ul>
+                                </div>
+                        <!--<div class="mui-loading">-->
+                            <!--<div class="mui-spinner">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--发现-->
+    <div id="discover" class="mui-control-content">
+        <div class="discover-main">
+            <p class="discover-header">发现</p>
+            <ul class="mui-table-view discover-module">
+                <li class="mui-table-view-cell discover-activity-center">
+                    <i class="discover-activity-icon"></i>
+                    <span class="discover-name">活动中心</span>
+                    <i class="more-arrow"></i>
+                </li>
+                <li class="mui-table-view-cell discover-package-center">
+                    <i class="discover-package-icon"></i>
+                    <span class="discover-name">礼包中心</span>
+                    <i class="more-arrow"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--圈子-->
+    <div id="friends" class="mui-control-content">
+        <section class="friends-circle-header">
+            <div class="header-bg"></div>
+            <div class="header-bg-mask"></div>
+            <div class="friends-circle-title">
+                <i class="dynamic-type"></i>
+                <span class="dynamic-type-txt">推荐动态</span>
+                <i class="add-dynamic"></i>
+            </div>
+            <div class="user-info">
+                <img src="http://alcache.idianyou.cn/dianyou/data/dianyou/img/20171013/ff8080815f15bdd7015f2433ef17001d.jpg" class="user-img"/>
+                <div class="user-info-description">
+                    <p class="user">
+                        <span class="user-name">渴死的鱼</span><img class="user-gender" src="images/female.png"/>
+                    </p>
+                    <p class="user-attention-fans">
+                        <span class="user-attention">关注</span><span class="user-attention-num">12313</span><span class="user-divider"></span><span class="user-fans">粉丝</span><span class="user-fans-num">55</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="circle-msg" style="display: none">
+            <img src="http://alcache.idianyou.cn/dianyou/data/dianyou/img/20171013/ff8080815f15bdd7015f2433ef17001d.jpg" class="circle-msg-img"/><span class="circle-msg-num">999条新消息</span>
+        </div>
+        <ul class="mui-table-view dynamic-list" id="dynamic-list">
+            <li class="mui-table-view-cell mui-media dynamic-item">
+                <a href="javascript:;" class="dynamic-user-logo mui-pull-left">
+                    <img src="http://alcache.idianyou.cn/dianyou/data/dianyou/img/defaulthead/360_360/4cdd15b66087bb06b59e083ccf3757b5.png"/>
+                </a>
+                <div class="mui-media-body mui-pull-left dynamic-item-content">
+                    <a class="dynamic-user-name" href="javascript:;">大鹏游戏</a>
+                    <p class="dynamic-user-intro">最近吃鸡游戏很火</p>
+                        <div class="mui-content-padded">
+                            <p class="dynamic-imgList">
+                                <img src="http://alcache.idianyou.cn/dianyou/data/circle/img/20171130/ff8080816005689101600ab7863b0058.jpg" data-preview-src="http://alcache.idianyou.cn/dianyou/data/circle/img/20171130/ff8080816005689101600ab786150057.jpg" data-preview-group="1" style="width:2.25rem;height:6.13rem;"/>
+                                <img src="http://alcache.idianyou.cn/dianyou/data/circle/img/20171130/ff8080816005689101600ab7863b0058.jpg" data-preview-src="http://alcache.idianyou.cn/dianyou/data/circle/img/20171130/ff8080816005689101600ab786150057.jpg" data-preview-group="1" style="width:2.25rem;height:6.13rem;"/>
+                            </p>
+                        </div>
+                    <div class="dynamic-item-des">
+                        <a href="javascript:;" class="dynamic-item-creatTime">2小时前</a>
+                        <a href="javascript:;" class="dynamic-item-type">游戏</a>
+                        <a href="javascript:;" class="dynamic-item-name">大话西游</a>
+                        <img src="images/comment-btn.png" class="dynamic-item-comment">
+                    </div>
+                    <!--评论区-->
+                    <div class="dynamic-comment-zone">
+                        <!--顶部三角-->
+                        <div class="entry-trangle-top"></div>
+                        <div class="dynamic-praise">
+                            <div class="dynamic-praise-info">
+                                <img class="dynamic-praise-icon" src="images/praise-icon.png"/>
+                                <p class=" dynamic-praise-user">1213132132312131321323121213等99人觉得很赞</p>
+                            </div>
+                        </div>
+                        <div class="dynamic-comment">
+                            <p class="user-comment-item">
+                               <span class="user-comment-name">风中旅人</span>：<span class="user-comment-content">兄弟，大坑啊兄弟，大坑啊兄弟，大坑啊兄弟，大坑啊</span>
+                            </p>
+                            <p class="user-comment-item">
+                                <span class="user-comment-name">大鹏游戏</span>回复<span class="user-comment-name">风中旅人</span>：<span class="user-comment-content">大佬啊大佬啊啊大佬大佬啊大佬啊啊大佬啊大佬啊啊大佬啊大佬啊啊</span>
+                            </p>
+                            <p class="see-more-comments">点击查看更多999条评论</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mui-table-view-cell mui-media dynamic-item">
+                <a href="javascript:;" class="dynamic-user-logo mui-pull-left">
+                    <img src="http://alcache.idianyou.cn/dianyou/data/dianyou/img/defaulthead/360_360/4cdd15b66087bb06b59e083ccf3757b5.png" />
+                </a>
+                <div class="mui-media-body mui-pull-left dynamic-item-content">
+                    <a class="dynamic-user-name" href="javascript:;">大鹏游戏</a>
+                    <p class="dynamic-user-intro">最近吃鸡游戏很火</p>
+                    <div class="mui-content-padded">
+                        <p class="dynamic-imgList">
+                            <img src="http://alcache.idianyou.cn/dianyou/data/circle/img/20171130/ff8080816005689101600ab7863b0058.jpg" data-preview-src="" data-preview-group="2" style="width:2.25rem;height:6.13rem;"/>
+                        </p>
+                    </div>
+                    <div class="dynamic-item-des">
+                        <a href="javascript:;" class="dynamic-item-creatTime">2小时前</a>
+                        <a href="javascript:;" class="dynamic-item-type">游戏</a>
+                        <a href="javascript:;" class="dynamic-item-name">大话西游</a>
+                        <img src="images/comment-btn.png" class="dynamic-item-comment">
+                    </div>
+                    <!--评论区-->
+                    <div class="dynamic-comment-zone">
+                        <!--顶部三角-->
+                        <div class="entry-trangle-top"></div>
+                        <div class="dynamic-praise">
+                            <div class="dynamic-praise-info">
+                                <img class="dynamic-praise-icon" src="images/praise-icon.png"/>
+                                <p class=" dynamic-praise-user">1213132132312131321323121213等99人觉得很赞</p>
+                            </div>
+                        </div>
+                        <div class="dynamic-comment">
+                            <p class="user-comment-item">
+                                <span class="user-comment-name">风中旅人</span>：<span class="user-comment-content">兄弟，大坑啊兄弟，大坑啊兄弟，大坑啊兄弟，大坑啊</span>
+                            </p>
+                            <p class="user-comment-item">
+                                <span class="user-comment-name">大鹏游戏</span>回复<span class="user-comment-name">风中旅人</span>：<span class="user-comment-content">大佬啊大佬啊啊大佬大佬啊大佬啊啊大佬啊大佬啊啊大佬啊大佬啊啊</span>
+                            </p>
+                            <p class="see-more-comments">点击查看更多999条评论</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mui-table-view-cell mui-media dynamic-item">
+                <a href="javascript:;" class="dynamic-user-logo mui-pull-left">
+                    <img src="http://alcache.idianyou.cn/dianyou/data/dianyou/img/defaulthead/360_360/4cdd15b66087bb06b59e083ccf3757b5.png" />
+                </a>
+                <div class="mui-media-body mui-pull-left dynamic-item-content">
+                    <a class="dynamic-user-name" href="javascript:;">大鹏游戏</a>
+                    <p class="dynamic-user-intro">最近吃鸡游戏很火</p>
+                    <div class="mui-content-padded">
+                        <p class="dynamic-imgList">
+                            <img src="http://alcache.idianyou.cn/dianyou/data/circle/img/20171130/ff8080816005689101600ab7863b0058.jpg" data-preview-src="" data-preview-group="3" style="width:2.25rem;height:6.13rem;"/>
+                        </p>
+                    </div>
+                    <div class="dynamic-item-des">
+                        <a href="javascript:;" class="dynamic-item-creatTime">2小时前</a>
+                        <a href="javascript:;" class="dynamic-item-type">游戏</a>
+                        <a href="javascript:;" class="dynamic-item-name">大话西游</a>
+                        <img src="images/comment-btn.png" class="dynamic-item-comment">
+                    </div>
+                    <!--评论区-->
+                    <div class="dynamic-comment-zone">
+                        <!--顶部三角-->
+                        <div class="entry-trangle-top"></div>
+                        <div class="dynamic-praise">
+                            <div class="dynamic-praise-info">
+                                <img class="dynamic-praise-icon" src="images/praise-icon.png"/>
+                                <p class=" dynamic-praise-user">1213132132312131321323121213等99人觉得很赞</p>
+                            </div>
+                        </div>
+                        <div class="dynamic-comment">
+                            <p class="user-comment-item">
+                                <span class="user-comment-name">风中旅人</span>：<span class="user-comment-content">兄弟，大坑啊兄弟，大坑啊兄弟，大坑啊兄弟，大坑啊</span>
+                            </p>
+                            <p class="user-comment-item">
+                                <span class="user-comment-name">大鹏游戏</span>回复<span class="user-comment-name">风中旅人</span>：<span class="user-comment-content">大佬啊大佬啊啊大佬大佬啊大佬啊啊大佬啊大佬啊啊大佬啊大佬啊啊</span>
+                            </p>
+                            <p class="see-more-comments">点击查看更多999条评论</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mui-table-view-cell mui-media dynamic-item">
+                <a href="javascript:;" class="dynamic-user-logo mui-pull-left">
+                    <img src="http://alcache.idianyou.cn/dianyou/data/dianyou/img/defaulthead/360_360/4cdd15b66087bb06b59e083ccf3757b5.png" />
+                </a>
+                <div class="mui-media-body mui-pull-left dynamic-item-content">
+                    <a class="dynamic-user-name" href="javascript:;">大鹏游戏</a>
+                    <p class="dynamic-user-intro">最近吃鸡游戏很火</p>
+                    <div class="mui-content-padded">
+                        <p class="dynamic-imgList">
+                            <img src="http://alcache.idianyou.cn/dianyou/data/circle/img/20171130/ff8080816005689101600ab7863b0058.jpg" data-preview-src="" data-preview-group="4" style="width:2.25rem;height:6.13rem;"/>
+                        </p>
+                    </div>
+                    <div class="dynamic-item-des">
+                        <a href="javascript:;" class="dynamic-item-creatTime">2小时前</a>
+                        <a href="javascript:;" class="dynamic-item-type">游戏</a>
+                        <a href="javascript:;" class="dynamic-item-name">大话西游</a>
+                        <img src="images/comment-btn.png" class="dynamic-item-comment">
+                    </div>
+                    <!--评论区-->
+                    <div class="dynamic-comment-zone">
+                        <!--顶部三角-->
+                        <div class="entry-trangle-top"></div>
+                        <div class="dynamic-praise">
+                            <div class="dynamic-praise-info">
+                                <img class="dynamic-praise-icon" src="images/praise-icon.png"/>
+                                <p class=" dynamic-praise-user">1213132132312131321323121213等99人觉得很赞</p>
+                            </div>
+                        </div>
+                        <div class="dynamic-comment">
+                            <p class="user-comment-item">
+                                <span class="user-comment-name">风中旅人</span>：<span class="user-comment-content">兄弟，大坑啊兄弟，大坑啊兄弟，大坑啊兄弟，大坑啊</span>
+                            </p>
+                            <p class="user-comment-item">
+                                <span class="user-comment-name">大鹏游戏</span>回复<span class="user-comment-name">风中旅人</span>：<span class="user-comment-content">大佬啊大佬啊啊大佬大佬啊大佬啊啊大佬啊大佬啊啊大佬啊大佬啊啊</span>
+                            </p>
+                            <p class="see-more-comments">点击查看更多999条评论</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    <!--我的-->
+    <div id="mine" class="mui-control-content">
+        <p class="mine-heaader">
+            <span class="mine-header-title">我的</span>
+            <img src="images/mine-setting.png" class="mine-setting-icon"/>
+        </p>
+        <ul class="mine-info">
+           <li class="mine-info-intro">
+               <img src="http://alcache.idianyou.cn/dianyou/data/dianyou/img/20171013/ff8080815f15bdd7015f2433ef17001d.jpg" class="mine-logo" />
+               <p class="mine-name"><span>我吃饭</span><img src="images/female.png" class="mine-gender"></p>
+               <p class="mine-contact">
+                   <span><i>id:</i><i class="mine-id">dy12345645464</i></span><span><i>电话:</i><i class="mine-phone">13752289990</i></span>
+               </p>
+               <img src="images/mine-more.png" class="mine-more"/>
+           </li>
+           <li class="mine-attention-fans">
+               <span class="mine-attention">关注：<i class="mine-attention-num">32</i></span>
+               <img src="images/mine-divider.png" class="mine-divider"/>
+               <span class="mine-fans">粉丝：<i class="mine-fans-num">30</i></span>
+           </li>
+       </ul>
+        <div class="mine-options">
+            <ul class="mine-list">
+                <li class="mine-item">
+                    <img src="images/mine-coin.png" class="mine-item-logo"/><span class="mine-item-name">点币充值</span><span class="mine-balance">余额 ：<i>305.1</i></span><img src="images/more-btn.png" class="mine-item-more"/>
+                </li>
+                <li class="mine-item">
+                    <img src="images/mine-coin.png" class="mine-item-logo"/><span class="mine-item-name">消费记录</span><img src="images/more-btn.png" class="mine-item-more"/>
+                </li>
+            </ul>
+            <ul class="mine-list">
+                <li class="mine-item">
+                    <img src="images/mine-coin.png" class="mine-item-logo"/><span class="mine-item-name">游戏历史</span><img src="images/more-btn.png" class="mine-item-more"/>
+                </li>
+                <li class="mine-item">
+                    <img src="images/mine-coin.png" class="mine-item-logo"/><span class="mine-item-name">消息提醒</span><img src="images/more-btn.png" class="mine-item-more"/>
+                </li>
+            </ul>
+            <ul class="mine-list">
+                <li class="mine-item">
+                    <img src="images/mine-coin.png" class="mine-item-logo"/><span class="mine-item-name">我的收藏</span><img src="images/more-btn.png" class="mine-item-more"/>
+                </li>
+                <li class="mine-item">
+                    <img src="images/mine-coin.png" class="mine-item-logo"/><span class="mine-item-name">我的礼包</span><img src="images/more-btn.png" class="mine-item-more"/>
+                </li>
+            </ul>
+            <ul class="mine-list">
+                <li class="mine-item">
+                    <img src="images/mine-coin.png" class="mine-item-logo"/><span class="mine-item-name">管理</span><img src="images/more-btn.png" class="mine-item-more"/>
+                </li>
+                <li class="mine-item">
+                    <img src="images/mine-coin.png" class="mine-item-logo"/><span class="mine-item-name">设置</span><img src="images/more-btn.png" class="mine-item-more"/>
+                </li>
+                <li class="mine-item">
+                    <img src="images/mine-coin.png" class="mine-item-logo"/><span class="mine-item-name">帮助</span><img src="images/more-btn.png" class="mine-item-more"/>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<nav class="mui-bar mui-bar-tab" id="home-tab">
+    <a class="mui-tab-item mui-active" href="#slider">
+        <span class="mui-icon  home-tab-icon home-icon-game"></span>
+        <span class="mui-tab-label">游戏</span>
+    </a>
+    <a class="mui-tab-item" href="#discover">
+        <span class="mui-icon home-tab-icon home-icon-discover"></span>
+        <span class="mui-tab-label">发现</span>
+    </a>
+    <a class="mui-tab-item" href="#friends">
+        <span class="mui-icon home-tab-icon home-icon-friends"></span>
+        <span class="mui-tab-label">圈子</span>
+    </a>
+    <a class="mui-tab-item" href="#mine">
+        <span class="mui-icon home-tab-icon home-icon-mine"></span>
+        <span class="mui-tab-label">我的</span>
+    </a>
+</nav>
+<script src="js/mui.min.js"></script>
+<script src="js/mui.zoom.js"></script>
+<script src="js/mui.previewimage.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+    mui.init({
+        swipeBack: false,//关闭右滑关闭功能
+    });
+    (function ($) {
+        $('.mui-scroll-wrapper').scroll({
+            indicators: false //是否显示滚动条
+        });
+    })(mui);
+//    mui.previewImage({
+//        id: '__MUI_PREVIEWIMAGE',
+//        zoom: true,
+//        header: '',
+//        footer: '<div class="mui-slider-indicator" id="previewImage-dot"></div>'
+//    });
+</script>
+<script src="util/rem.js"></script>
+<script src="js/home.js"></script>
+<script>
+$(function () {
+    $('.discover-activity-center').on('click',function () {
+        window.location.href='./discover/activity-center/index.html';
+    });
+    $('.discover-package-center').on('click',function () {
+        window.location.href='./discover/package-center/index.html';
+    });
+})
+</script>
+</body>
+
+</html>

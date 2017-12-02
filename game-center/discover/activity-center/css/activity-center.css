@@ -1,0 +1,94 @@
+body::-webkit-scrollbar{
+   display:none
+}
+.activity-center-header{
+    width:100%;
+    background-color:#00ba85;
+    position:relative;
+    height:0.96rem;
+    line-height: 0.96rem;
+}
+.activity-center-header .back,.activity-center-header .activity-center-name{
+    position:absolute;
+    top:50%;
+    transform:translate(0,-50%);
+    -webkit-transform:translate(0,-50%) ;
+    height:0.47rem;
+    line-height:0.47rem;
+}
+.activity-center-header .back{
+    width:0.27rem;
+    background:url('../images/back.png') no-repeat;
+    background-size:cover;
+    left:0.2rem;
+}
+.activity-center-header .activity-center-name{
+    color:#fff;
+    font-size:0.32rem;
+    left:0.57rem;
+}
+#activity-list{
+    width:100%;
+    background-color:#fff;
+}
+#activity-list::-webkit-scrollbar{
+    display:none
+}
+#activity-list .activity-item{
+    position:relative;
+    margin-bottom:0.16rem;
+}
+#activity-list .activity-title{
+    padding:0 .2rem;
+    height:0.8rem;
+    line-height: .8rem;
+}
+#activity-list .activity-title .activity-name{
+    float:left;
+    font-size:0.3rem;
+    font-weight: 600;
+    color:#333;
+    letter-spacing: 1px;
+}
+#activity-list .activity-title .activity-info{
+    float:right;
+    font-size:0;
+}
+#activity-list .activity-title .activity-info>span{
+    font-size:0.24rem;
+    vertical-align: middle;
+}
+#activity-list .activity-title .activity-info .time-icon{
+    width:0.26rem;
+    height:0.26rem;
+    background:url('../images/time-icon.png') no-repeat;
+    background-size:cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right:0.08rem;
+}
+#activity-list .activity-time{
+    color:#fe0000;
+}
+.activity-logo{
+    position:relative;
+    width:7.2rem;
+    height:2.7rem;
+}
+.activity-img{
+    width:7.2rem;
+    height:2.7rem;
+}
+.activity-state{
+    position:absolute;
+    bottom:0;
+    right:0;
+    z-index:10;
+    background-color: #ff1010;
+    color:#fff;
+    width:1.16rem;
+    height:0.42rem;
+    font-size:0.24rem;
+    text-align: center;
+    line-height: 0.42rem;
+}
